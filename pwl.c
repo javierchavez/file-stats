@@ -43,15 +43,19 @@ int main(int argc, const char * argv[])
     }
     
     real_path = realpath(infile, NULL);
-    
+
+    /* print the path of the file */
     printf("File: %s\n", real_path);
     free(real_path);
 
+    /* create a list */
     list = create_empty_node();
     
+    /* call the stats read function */
     read(in, list);
     
     fclose(in);
+    
     /* print to stdbout */
     print_stats(list);
     
