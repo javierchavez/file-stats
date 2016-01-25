@@ -1,5 +1,5 @@
 all:
-	gcc -Wall -ansi -pedantic pwl.c linkedlist.c stats.c -o pwl
+	gcc -Wall -ansi -pedantic src/pwl.c src/linkedlist.c src/stats.c -o pwl
 
 deploy:
 	mkdir ../file-stats-javier-c
