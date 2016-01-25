@@ -43,9 +43,9 @@ void add_last ( List* head, List* node)
 List* poll(List** head)
 {
     List* node = *head;
-    unsigned long old_data[256] = {0};
+    unsigned long old_data[ASCII_MAX] = {0};
     /* copy the data to a new node */
-    memcpy(old_data, node->occurrences, 256 * sizeof(unsigned long));
+    memcpy(old_data, node->occurrences, ASCII_MAX * sizeof(unsigned long));
     
     *head = node->next;
     /* remove the node from mem */
@@ -68,7 +68,7 @@ List* create_empty_node()
     /* initialize next to null */
     node->next = NULL;
     /* initialize to 0 */
-    for (i = 0; i < 256; i++)
+    for (i = 0; i < ASCII_MAX; i++)
     {
         node->occurrences[i] = 0;
     }
@@ -81,7 +81,7 @@ List* create_node(unsigned long data[])
 {
     List* node = create_empty_node();
     
-    memcpy(node->occurrences, data, 256*sizeof(unsigned long));
+    memcpy(node->occurrences, data, ASCII_MAX*sizeof(unsigned long));
     
     return node;
 }

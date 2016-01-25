@@ -29,7 +29,7 @@ int main(int argc, const char * argv[])
 
     if(argc != 2)
     {
-        printf("wrong number of args\n");
+        fprintf(stderr, "wrong number of args\n");
         return 1;
     }
     infile = argv[1];
@@ -38,7 +38,7 @@ int main(int argc, const char * argv[])
     
     if(in == NULL)
     {
-        printf("couldn't open %s for reading\n", infile);
+        fprintf(stderr, "couldn't open %s for reading\n", infile);
         return 2;
     }
     

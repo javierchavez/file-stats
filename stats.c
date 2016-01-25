@@ -26,7 +26,7 @@ void read(FILE* in, List* list)
             continue;
         }
 
-        if (c < 256)
+        if (c < ASCII_MAX)
         {
             /* increment a given char */
             current->occurrences[c] += 1;
@@ -64,7 +64,7 @@ void print(unsigned long count[], int current_element)
     unsigned long total=0;
     unsigned long readable_total=0;
     
-    for ( i = 0 ; i < 256 ; i++ )
+    for ( i = 0 ; i < ASCII_MAX ; i++ )
     {
         if( count[i] > 0 )
         {

@@ -15,6 +15,8 @@
 #include <stdlib.h>
 #include <string.h>
 
+#define ASCII_MAX 256
+
 /**
  * @brief Use brief, otherwise the index won't have a brief explanation.
  *
@@ -25,7 +27,7 @@
  */
 struct Node
 {
-    unsigned long occurrences[256];
+    unsigned long occurrences[ASCII_MAX];
     struct Node* next;
 };
 
