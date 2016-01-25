@@ -48,7 +48,7 @@ int main(int argc, const char * argv[])
     real_path = realpath(infile, NULL);
 
     /* print the path of the file */
-    printf("File: %s\n", real_path);
+    printf("File %7s %s\n", ":", real_path);
     free(real_path);
 
     /* create a list */

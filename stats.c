@@ -42,7 +42,7 @@ void print_stats(List* list)
     int i = 1;
     List* current = list;
     
-    printf("Paragraphs: %d\n\n", length(list));
+    printf("Paragraphs%2s %d\n\n",":", length(list));
 
     while(list != NULL)
     {
@@ -80,7 +80,7 @@ void print(unsigned long count[], int current_element)
     }
 
     /* output to stdout with new stats */
-    printf("Paragraph #%i %lu %lu %lu\n",
+    printf("Paragraph #%d: %lu %lu %lu\n",
            current_element,
            count[10],
            count[32]+1,
