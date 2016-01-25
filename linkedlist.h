@@ -58,7 +58,8 @@ List* poll(List** head);
 /**
  * @brief Create a node with no values.
  *
- * Detailed explanation.
+ * Uses malloc to create a node struct. occurrences is initialized to 
+ * ASCII_MAX*(unsigned long).
  *
  * @return A empty node. Not connected to anything
  */
