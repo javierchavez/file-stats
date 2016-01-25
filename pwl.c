@@ -29,7 +29,8 @@ int main(int argc, const char * argv[])
     const char* infile;
     FILE* in;
     char* real_path;
-
+    char *realpath(const char *path, char *resolved_path);
+    
     if(argc != 2)
     {
         fprintf(stderr, "wrong number of args. ./program path-to-file.txt\n");
