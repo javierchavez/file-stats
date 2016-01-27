@@ -15,8 +15,14 @@ void read(FILE* in, List* list)
     int c = 0;
     int prev = 0;
     
-    while ( ( c = fgetc( in ) ) != EOF )
+    while ( 1 )
     {
+        c = fgetc( in );
+        if (c == EOF)
+        {
+            break;
+        }
+
         /* Paragraph is defined as /n/n */
         if (prev == 10 && c == 10)
         {
@@ -43,7 +49,7 @@ void print_stats(List* list)
     List* current = list;
     
     printf("Paragraphs%2s %d\n\n",":", length(list));
-
+    
     while(list != NULL)
     {
         /* poll the list (remove first) */
@@ -86,4 +92,5 @@ void print(unsigned long count[], int current_element)
            count[32]+1,
            readable_total);
 
+    printf("words: %d chars: %lu\n", 2, total);
 }

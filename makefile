@@ -1,5 +1,12 @@
+.PHONY: clean all test deploy
+
 all:
 	gcc -Wall -ansi -pedantic src/pwl.c src/linkedlist.c src/stats.c -o pwl
+
+test:
+	make
+	./pwl tests/testfile.txt
+	wc tests/testfile.txt
 
 deploy:
 	mkdir ../file-stats-javier-c
