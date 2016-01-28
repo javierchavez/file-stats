@@ -6,6 +6,7 @@
  *
  */
 
+#include <ctype.h>
 #include "stats.h"
 
 
@@ -90,7 +91,5 @@ void print(unsigned long count[], int current_element)
            current_element,
            count[10],
            count[32]+1,
-           readable_total);
-
-    printf("words: %d chars: %lu\n", 2, total);
+           total);
 }
